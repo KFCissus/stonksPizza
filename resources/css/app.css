@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: rgb(154, 92, 0);
+}
+
+#main {
+    height: 400px;
+    background-image: url("https://i.etsystatic.com/23444619/r/il/6a2b50/2958612098/il_570xN.2958612098_l692.jpg");
+}
+
+#main h1 {
+    color: #fff;
+    background-color: rgb(70, 70, 70);
+    opacity: 0.8;
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+main {
+    margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 50px;
+        grid-row-gap: 0px;
+}
+
+#imageLeft {
+    grid-column: 1;
+    margin-left: 50px;
+}
+
+#imageLeft:hover {
+    animation: shake 1.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-12px); }
+    50% { transform: translateX(12px); }
+    75% { transform: translateX(-12px); }
+    100% { transform: translateX(0); }
+}
+
+#textRight {
+    margin-right: 15px;
+}
+
+ol {
+    background-color: gainsboro;
+    font-size: 20px;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin-left: 15px;
+}
+
+button {
+    background-color: #fab16e5e !important;
+    padding: 8px 8px;
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+#bestellenTitle {
+    font-size: 30px;
+    text-align: center;
+}
+
+#bestellenDiv {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 27px;
+        grid-row-gap: 27px;
+}
+
+#firstPizza {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#secondPizza {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#thirdPizza {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+h2 {
+    margin-left: 15px;
+}
+
+img {
+    animation: shake 1.5s ease-in-out;
+}
