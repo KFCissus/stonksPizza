@@ -18,12 +18,12 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('/home', function () {
-    return view('homepage');
-});
-
 Route::get('/bestellen', function () {
     return view('bestellen');
+});
+
+Route::get('/home', function () {
+    return view('homepage');
 });
 
 Route::get('/dashboard', function () {
