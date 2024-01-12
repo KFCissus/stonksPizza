@@ -38,7 +38,7 @@
             <img src="https://i.pinimg.com/originals/04/88/32/04883229aaa10693e1966b39142ad4a9.png" alt="ladyimage" height="500px">
             <a href="/bestellen">Eten bestellen</a>
             <a href="#">Reserveren</a>
-              <a href="#">Status bestelling</a>
+              <a href="/status-bestelling">Status bestelling</a>
               <a href="/dashboard">Account beheren</a>
             <a href="#">Contact</a>
           </div>
@@ -140,11 +140,11 @@
         <div class="row">
             <div id="paginas" class="column">
                 <h2>Pagina's</h2>
-                <p><a class="links" href="index.html">Home-pagina</a> <br>
-                  <a class="links" href="https://wwc.resengo.com/" target="_blank">Reserveren van een tafel</a> <br>
-                <a class="links" href="bestellen.html">Eten bestellen</a> <br>
-                    <a class="links" href="vacatures.html">Status bestelling</a> <br>
-                    <a class="links" href="contact.html">Contact</a><br>
+                <p><a class="links" href="/home">Home-pagina</a> <br>
+                  <a class="links" href="#" target="_blank">Reserveren van een tafel</a> <br>
+                <a class="links" href="/bestellen">Eten bestellen</a> <br>
+                    <a class="links" href="/status-bestelling">Status bestelling</a> <br>
+                    <a class="links" href="#">Contact</a><br>
                 </p>
             </div>
             <div class="column">
