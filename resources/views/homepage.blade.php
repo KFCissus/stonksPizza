@@ -10,8 +10,6 @@
     <title>De Pink</title>
     <link rel="icon" type="image/png" href="img/thuisbezorgd2.png" />
   <meta property='og:image' content='/img/reserveren.jpg'/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="scripts/script.js"></script>
     <!-- Importeren van de Google font -->
     <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
@@ -29,7 +27,7 @@
             <ul>
                 <li id="active"><a href="#"> <i class="fa-solid fa-house"></i> Huis</a></li>
                 <li><a href="#menukaart"> <i class="fa-solid fa-utensils"></i> Menukaart</a></li>
-                <li><a href="https://wwc.resengo.com/"> <i class="fa-solid fa-book"></i> Boek een tafel</a>
+                <li><a href="#"> <i class="fa-solid fa-book"></i> Boek een tafel</a>
                 </li>
               <li class="hamburger-menu"><a href="javascript:void(0);" onclick="openNav()"><i class="fa-solid fa-bars"></i> Bekijk meer</a></li>
             </ul>
@@ -37,11 +35,11 @@
       <div id="myNav" class="overlay">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div class="overlay-content">
-            <img src="https://govolt.nl/wp-content/uploads/2021/03/menu-home.png" alt="ladyimage" height="500px">
+            <img src="https://i.pinimg.com/originals/04/88/32/04883229aaa10693e1966b39142ad4a9.png" alt="ladyimage" height="500px">
             <a href="/bestellen">Eten bestellen</a>
             <a href="#">Reserveren</a>
-              <a href="#">Solliciteren</a>
-              <a href="#">Zakelijk</a>
+              <a href="#">Status bestelling</a>
+              <a href="/dashboard">Account beheren</a>
             <a href="#">Contact</a>
           </div>
       </div>
@@ -51,7 +49,7 @@
                 <p>Een warme pizza uit onze steen-oven!</p> <br>
                 <button id="hero-button1" type="button" onclick="window.location.href='/bestellen';">
                     <i class="fa-solid fa-shop"></i> Bestellen</button>
-                <button id="hero-button2" onclick="window.location.href='https://wwc.resengo.com/';"> <i
+                <button id="hero-button2"> <i
                         class="fa-solid fa-calendar-days"></i> Reserveren</button>
               <p style="width: 500px">Of bel naar <a href="tel:+31615321479">+316000000</a></p>
             </div>
@@ -89,7 +87,7 @@
 
             Daarnaast kunt u met het gedownloade menu ook gemakkelijk de allergie-informatie en prijzen van de gerechten
             raadplegen, zodat u goed geïnformeerd kunt zijn voordat u naar ons restaurant komt.</p> <br>
-        <a href="txt/menu.txt" id="menu-button" class="notification">
+        <a href="/bestellen" id="menu-button" class="notification">
             <span>Bekijken</span>
             <span class="badge">Vernieuwd!</span>
         </a>
@@ -145,7 +143,7 @@
                 <p><a class="links" href="index.html">Home-pagina</a> <br>
                   <a class="links" href="https://wwc.resengo.com/" target="_blank">Reserveren van een tafel</a> <br>
                 <a class="links" href="bestellen.html">Eten bestellen</a> <br>
-                    <a class="links" href="vacatures.html">Vacatures</a> <br>
+                    <a class="links" href="vacatures.html">Status bestelling</a> <br>
                     <a class="links" href="contact.html">Contact</a><br>
                 </p>
             </div>
@@ -173,6 +171,19 @@
           </div>
         </div>
     </div>
+
+    <script>
+        function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    document.querySelector(".hamburger-menu").style.display = "none";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0";
+    document.querySelector(".hamburger-menu").style.display = "block";
+}
+
+    </script>
 </body>
 
 </html>
