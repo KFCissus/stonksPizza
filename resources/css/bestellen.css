@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #F22828 0%, #FFA1A1 100%);
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+#productContainer {
+  margin-top: 200px;
+  display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 21px;
+grid-row-gap: 21px;
+text-align: center;
+}
+
+#productContainer img {
+  height: 300px;
+  width: 300px;
+}
+
+#productContainer button {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+#pepperoniPizza {
+  grid-column: 1;
+  grid-row: 1;
+}
+  
+  .custom-div {
+    width: 268px;
+    height: 238px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .custom-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='268' height='238' viewBox='0 0 268 238' fill='none'%3E%3Cg filter='url(%23filter0_d_1_13)'%3E%3Cpath d='M4 16C4 10.3995 4 7.59921 5.08993 5.46009C6.04867 3.57847 7.57847 2.04867 9.46009 1.08993C11.5992 0 14.3995 0 20 0H248C253.601 0 256.401 0 258.54 1.08993C260.422 2.04867 261.951 3.57847 262.91 5.46009C264 7.59921 264 10.3995 264 16V214C264 219.601 264 222.401 262.91 224.54C261.951 226.422 260.422 227.951 258.54 228.91C256.401 230 253.601 230 248 230H20C14.3995 230 11.5992 230 9.46009 228.91C7.57847 227.951 6.04867 226.422 5.08993 224.54C4 222.401 4 219.601 4 214V16Z' fill='url(%23paint0_linear_1_13)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_1_13' x='0' y='0' width='268' height='238' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_1_13'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_1_13' result='shape'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_1_13' x1='134' y1='0' x2='134' y2='230' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23475271'/%3E%3Cstop offset='1' stop-color='%232A304A'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+  }
+  
+  .text-block {
+    border-radius: 10px;
+    background: #242942;
+    width: 237px;
+    height: 39px;
+    flex-shrink: 0;
+    align-self: flex-start; /* Align to the bottom */
+    z-index: 1;
+  }
+  
