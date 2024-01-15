@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Orders', function (Blueprint $table) {
-            $table->id();
+        Schema::create('Order_line', function (Blueprint $table) {
 
-            $table->timestamp('date');
-            //todo bestelstatus
-
-       //     $table->double('TotalPrice');
-
+            $table->foreignId('pizzas_id')->references('id')->on('pizzas')->cascadeOnDelete();
+            $table->foreignId('size_id')->references('id')->on('size')->cascadeOnDelete();
         });
     }
 
