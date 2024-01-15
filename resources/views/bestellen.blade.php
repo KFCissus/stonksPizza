@@ -21,27 +21,37 @@
     <div id="pepperoniPizza">
         <img src="https://static.vecteezy.com/system/resources/previews/010/793/986/original/pepperoni-pizza-isolated-with-clipping-path-png.png" rel="pepperoni">
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
-        <button><i class="fa-solid fa-plus"></i> Toevoegen</button>
+        <form>
+        <input type="button" value="Toevoegen">
+        </form>
     </div>
     <div id="hawaiPizza">
         <img src="https://images.newyorkpizza.nl/Products/Original/Hawaii-8059.png" rel="pepperoni">
         <p>Deze hawai pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
-        <button><i class="fa-solid fa-plus"></i> Toevoegen</button>
+        <form>
+            <input type="button" value="Toevoegen">
+            </form>
     </div>
     <div id="olijfPizza">
         <img src="https://www.freeiconspng.com/thumbs/pizza-png/pizza-png-15.png" rel="pepperoni">
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
-        <button><i class="fa-solid fa-plus"></i> Toevoegen</button>
+        <form>
+            <input type="button" value="Toevoegen">
+            </form>
     </div>
     <div id="americanoPizza">
         <img src="https://pabilimanila.com/cdn/shop/files/Bacon-Glazed-1-_1.png?v=1698749406" rel="pepperoni">
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
-        <button><i class="fa-solid fa-plus"></i> Toevoegen</button>
+                <form>
+            <input type="button" value="Toevoegen">
+            </form>
     </div>
     <div id="blauwekaasPizza">
         <img src="https://images.newyorkpizza.nl/Products/Original/4_cheese-8058.png" rel="pepperoni">
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
-        <button><i class="fa-solid fa-plus"></i> Toevoegen</button>
+                <form>
+            <input type="button" value="Toevoegen">
+            </form>
     </div>
  </div>
 </body>
