@@ -13,6 +13,6 @@ class ingredient_table extends Seeder
      */
     public function run(): void
     {
-
+        //
     }
 }

@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Orders', function (Blueprint $table) {
+        Schema::create('OrderStatus', function (Blueprint $table) {
             $table->id();
+            $table->string('status');
 
-            $table->timestamp('date');
-            //todo bestelstatus
-
-       //     $table->double('TotalPrice');
 
         });
     }
