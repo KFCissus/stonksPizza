@@ -7,7 +7,7 @@
     <meta name="description" content="Een all you can eat restaurant waar je Franse gerechten met een Aziatische twist kan proeven!">
     <meta name="keywords" content="Sushi, Restaurant, Eindhoven, RestaurantEhv, Ehv, De Pink">
     <meta name="author" content="Restaurant De Pink">
-    <title>De Pink</title>
+    <title>Stonks Pizza</title>
     <link rel="icon" type="image/png" href="img/thuisbezorgd2.png" />
   <meta property='og:image' content='/img/reserveren.jpg'/>
     <!-- Importeren van de Google font -->

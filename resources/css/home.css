@@ -61,9 +61,13 @@ li a:hover {
 
 }
 
+/*Navigation on the right side (see more) */
+
 .hamburger-menu {
     float: right;
 }
+
+/* Overlay navigation */
 
 .overlay {
     height: 100%;
@@ -109,6 +113,8 @@ li a:hover {
     }
 }
 
+/* Close button overlay navigation*/
+
 .closebtn {
   font-weight: bold;
   text-decoration: none !important;
@@ -137,6 +143,8 @@ a:hover {
     text-decoration: none;
 }
 
+/* Footer style*/
+
 footer {
     background-color: white;
     text-align: center;
@@ -150,11 +158,11 @@ footer {
     font-size: 22px;
 }
 
+/* Hero image (dus main image) bovenaan*/
+
 .hero-image {
-    /* Hero foto op home pagina */
     background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("https://www.thisiseindhoven.com/getmedia/6754c7b1-9c86-442b-a01d-4ee47cda4eb5/phpGoMhKa_1.jpeg");
     height: 550px;
-    /* Positie van de foto */
     background-position: right;
     background-size: cover;
     position: relative;
@@ -192,7 +200,7 @@ footer {
 /* Einde buttons op hero */
 
 
-/* Hero button stijl */
+/* Hero button style */
 
 #hero-button1 {
     background-color: white;
@@ -235,9 +243,18 @@ button {
 
 /* Einde hero button style */
 
+/*  Foto block (drie fotos) */
+
 .foto-block {
     text-align: center;
 }
+
+img:hover {
+    transform: scale(1.08);
+    transition-duration: 1s;
+}
+
+/* Video block (één video) */
 
  .video-block {
     text-align: center;
@@ -247,6 +264,17 @@ video {
     height: 250px;
     width: 500px;
 }
+
+
+video::-webkit-media-controls {
+    display: none;
+  }
+  
+  
+  ::-webkit-media-controls-enclosure {
+    display: none !important;
+  }
+
 
 .text-block {
     text-align: center;
@@ -273,24 +301,19 @@ video {
 
 /* Einde menu knop */
 
-
-/* Active page - Andere kleur */
+/* Active button / link kleur */
 #active {
     background-color: #ff0335;
 }
 
-/* Footer container */
-/* Create three equal columns that floats next to each other */
 .column {
     float: left;
     width: 50%;
     padding: 10px;
     height: 250px;
-    /* Should be removed. Only for demonstration */
     background-color: #ff0335;
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
@@ -307,6 +330,8 @@ video {
     color: white;
     text-decoration: none;
 }
+
+/* Wordt alleen getoont wanneer geen javascript actief is */
 
 #noscript {
     color: red;
@@ -340,10 +365,9 @@ video {
     color: red;
 }
 
-img:hover {
-    transform: scale(1.08);
-    transition-duration: 1s;
-}
+
+
+
 
 .invisbleA {
   text-decoration: none;
@@ -362,6 +386,8 @@ img:hover {
 #whiteStripeUnderHero {
   background-color: white;
 }
+
+/* Review callout rechtsonder */
 
 .callout {
   position: fixed;
@@ -401,7 +427,7 @@ img:hover {
   grid-column: 2;
 }
 
-/* Sluit button */
+/* Sluit button van callout*/
 .closebtn {
   position: absolute;
   top: 5px;
@@ -409,55 +435,4 @@ img:hover {
   color: white;
   font-size: 30px;
   cursor: pointer;
-}
-
-        .review-card {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 10px;
-            margin: 10px;
-            max-width: 200px;
-          max-height: 180px;
-          background-color: #ff0335;
-        }
-
-        .reviewer-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 10px;
-        }
-
-        .reviewer-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .reviewer-name {
-            font-weight: bold;
-            text-align: center;
-          margin-bottom: 5px;
-        }
-
-        .reviewer-desc {
-            font-weight: bold;
-            text-align: center;
-          margin-bottom: 5px;
-          font-size: 14px;
-        }
-
-        .star-rating {
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-video::-webkit-media-controls {
-  display: none;
-}
-
-
-::-webkit-media-controls-enclosure {
-  display: none !important;
 }
