@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('Order_line', function (Blueprint $table) {
-
+            $table->id();
+            $table->bigInteger('quantity');
             $table->foreignId('pizzas_id')->references('id')->on('pizzas')->cascadeOnDelete();
             $table->foreignId('size_id')->references('id')->on('size')->cascadeOnDelete();
         });

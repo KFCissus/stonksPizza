@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Pizza;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -13,6 +14,16 @@ class OrderController extends Controller
     public function index()
     {
         //
+    }
+    public function addOrder(Request $request)
+    {
+        //get the id of the pizza
+        $id = $request['id'];
+        // finds the pizza in the db
+        $pizza = Pizza::find($id);
+        //puts the pizza into the order
+        dd($pizza);
+
     }
 
     /**
