@@ -10,50 +10,13 @@
 </head>
 <body>
     <h1>Winkelwagen bekijken</h1>
-    <!-- Geselecteerde pizza's hieronder -->
-    <ul>
-        Geselecteerde item
-        <li></li> <!-- Hier pizza naam als voorbeeld -->
-        <li></li> <!-- Hier prijs als voorbeeld -->
-        <li></li> <!-- Hier groote als voorbeeld -->
-        <a href="">Annuleren</a>
-    </ul>
 
     <ul>
-        Geselecteerde item
-        <li></li> <!-- Hier pizza naam als voorbeeld -->
-        <li></li> <!-- Hier prijs als voorbeeld -->
-        <li></li> <!-- Hier groote als voorbeeld -->
-        <a href="">Annuleren</a>
-    </ul>
-
-    <ul>
-        Geselecteerde item
-        <li></li> <!-- Hier pizza naam als voorbeeld -->
-        <li></li> <!-- Hier prijs als voorbeeld -->
-        <li></li> <!-- Hier groote als voorbeeld -->
-        <a href="">Annuleren</a>
-    </ul>
-    <ul>
-        Geselecteerde item
-        <li></li> <!-- Hier pizza naam als voorbeeld -->
-        <li></li> <!-- Hier prijs als voorbeeld -->
-        <li></li> <!-- Hier groote als voorbeeld -->
-        <a href="">Annuleren</a>
-    </ul>
-    <ul>
-        Geselecteerde item
-        <li></li> <!-- Hier pizza naam als voorbeeld -->
-        <li></li> <!-- Hier prijs als voorbeeld -->
-        <li></li> <!-- Hier groote als voorbeeld -->
-        <a href="">Annuleren</a>
-    </ul>
-    <ul>
-        Geselecteerde item
-        <li></li> <!-- Hier pizza naam als voorbeeld -->
-        <li></li> <!-- Hier prijs als voorbeeld -->
-        <li></li> <!-- Hier groote als voorbeeld -->
-        <a href="">Annuleren</a>
+        <li>Geselecteerde item</li>
+        <li>Pizza naam als voorbeeld</li>
+        <li>Prijs als voorbeeld</li>
+        <li>Grootte als voorbeeld</li>
+        <a href="#">Annuleren</a>
     </ul>
 </body>
 </html>

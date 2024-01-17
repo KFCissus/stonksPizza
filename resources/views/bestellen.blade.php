@@ -12,6 +12,7 @@
     <header>
         <nav>
             <ul>
+                <li id="active"><a href="/"> <i class="fa-solid fa-house"></i> Home pagina </a></li>
                 <li id="active"><a href="/winkelwagen"> <i class="fa-solid fa-cart-shopping"></i> Winkelwagen bekijken</a></li>
                 <li><a href="#menukaart"> <i class="fa-solid fa-utensils"></i> Order status</a></li>
             </ul>

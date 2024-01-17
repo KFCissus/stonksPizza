@@ -49,8 +49,6 @@
                 <p>Een warme pizza uit onze steen-oven!</p> <br>
                 <button id="hero-button1" type="button" onclick="window.location.href='/bestellen';">
                     <i class="fa-solid fa-shop"></i> Bestellen</button>
-                <button id="hero-button2"> <i
-                        class="fa-solid fa-calendar-days"></i> Reserveren</button>
               <p style="width: 500px">Of bel naar <a href="tel:+31615321479">+316000000</a></p>
             </div>
     </div>
