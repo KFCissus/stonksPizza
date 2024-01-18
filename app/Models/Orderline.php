@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Orderline extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $table="order_line";
+    protected $fillable = ['quantity','pizzas_id','order_id'];
+    //protected $unique = ['id'];
 
 
-
-
-    public function order()
+    public function orderLine()
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsTo(Order::class)->distinct();
     }
 
 

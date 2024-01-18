@@ -30,7 +30,7 @@ Route::get('/home', function () {
 Route::get('/winkelwagen', function () {
     return view('winkelwagen');
 });
-Route::post('/order',[OrderController::class,'addOrder']);
+Route::post('/order',[OrderController::class,'addPizzaToOrder']);
 
 
 Route::get('/dashboard', function () {

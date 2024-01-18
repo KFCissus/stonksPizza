@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('OrderStatus', function (Blueprint $table) {
             $table->id();
             $table->string('status');
-
-
+        });
+        Schema::table('Orders',function (Blueprint $table){
+            $table->foreignId('OrderStatus_id')->references('id')->on('OrderStatus')->cascadeOnDelete();
         });
     }
 

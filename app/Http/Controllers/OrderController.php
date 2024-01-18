@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
+use App\Models\Orderline;
 use App\Models\Pizza;
 use Illuminate\Http\Request;
+use function Webmozart\Assert\Tests\StaticAnalysis\null;
 
 class OrderController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      */
@@ -15,14 +20,26 @@ class OrderController extends Controller
     {
         //
     }
-    public function addOrder(Request $request)
+    public function addPizzaToOrder(Request $request)
     {
+        //$value = session('key', 'default');
+        $value = session('_token');
         //get the id of the pizza
         $id = $request['id'];
         // finds the pizza in the db
         $pizza = Pizza::find($id);
         //puts the pizza into the order
-        dd($pizza);
+
+
+
+       $order = Order::firstOrCreate(['session'=>$value,'size_id' => 1,'OrderStatus_id' => 1]);
+
+
+//        $orderline = new Orderline();
+        $order->orderline()->create([ 'pizzas_id'=> $pizza['id'],'quantity'=>1, 'order_id'=>$order['id']]);
+        dd($order['id']);
+        //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
+        //Pizza::Orderline();
 
     }
 

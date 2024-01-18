@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('Order_line', function (Blueprint $table) {
-            $table->id();
+           // DO NOT ADD here $table->increments('id');
             $table->bigInteger('quantity');
-            $table->foreignId('pizzas_id')->references('id')->on('pizzas')->cascadeOnDelete();
-            $table->foreignId('size_id')->references('id')->on('size')->cascadeOnDelete();
+            $table->foreignId('pizzas_id')->references('id')->on('pizzas');
+            $table->foreignId('order_id')->references('id')->on('orders');
+
         });
     }
 

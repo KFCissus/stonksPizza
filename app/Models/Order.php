@@ -4,14 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Orderline;
+
 
 class Order extends Model
 {
+
+
     use HasFactory;
-    public $timestamps = true;
-    protected $guarded = ['id'];
-
-
+    public $timestamps = false;
+    protected $fillable = ['session','size_id','OrderStatus_id',];
 
    public function orderline()
    {
@@ -19,7 +21,7 @@ class Order extends Model
    }
    public function pizza()
    {
-       return $this->hasMany(Pizza::class);
+       return $this->hasMany('Pizza');
    }
 
     public function customer()

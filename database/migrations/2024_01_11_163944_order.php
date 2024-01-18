@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('Orders', function (Blueprint $table) {
             $table->id();
-
+            $table->string('session');
             $table->timestamp('date');
-            $table->foreignId('orderstatus_id')->references('id')->on('orderstatus');
+            $table->foreignId('size_id')->references('id')->on('PizzaSize');
 
        //     $table->double('TotalPrice');
 

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class orderStatusSeeder extends Seeder
 {
@@ -19,6 +20,8 @@ class orderStatusSeeder extends Seeder
             ['id'=>null,'status'=>'in de oven'],
             ['id'=>null,'status'=>'onderweg'],
             ['id'=>null,'status'=>'bezorgd']
+
         ];
+        DB::table('OrderStatus')->insert($pizzastatus);
     }
 }

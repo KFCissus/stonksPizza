@@ -14,11 +14,11 @@ class PizzaSeeder extends Seeder
     public function run(): void
     {
         $pizzas = [
-            ['id'=> null,'Name'=> ' pepperoni','ingredients'=>'?'],
-            ['id'=> null,'Name'=>'hawaii','ingredients'=>'?'],
-            ['id'=> null,'Name'=>'olijf','ingredients'=>'?'],
-            ['id'=> null,'Name'=>'bacon','ingredients'=>'?'],
-            ['id'=> null,'Name'=>'4 cheese','ingredients'=>'?']
+            ['id'=> null,'Name'=> ' pepperoni'],
+            ['id'=> null,'Name'=>'hawaii'],
+            ['id'=> null,'Name'=>'olijf'],
+            ['id'=> null,'Name'=>'bacon'],
+            ['id'=> null,'Name'=>'4 cheese']
 
         ];
         DB::table('pizzas')->insert($pizzas);
