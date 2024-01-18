@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->timestamp('date');
-            //todo bestelstatus
+            $table->foreignId('orderstatus_id')->references('id')->on('orderstatus');
 
        //     $table->double('TotalPrice');
 

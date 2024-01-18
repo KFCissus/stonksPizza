@@ -11,7 +11,7 @@ body {
   p {
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
 #productContainer {
   display: grid;
 grid-template-columns: repeat(4, 1fr);
@@ -32,14 +32,21 @@ text-align: center;
   border-radius: 8px;
   color: #fff;
   background-color: #6b0000;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+
+}
+input:hover{
+    background-color: #7b0000;
+>>>>>>> 6b32a5f7bf43b20e9ca122f7542b3a2b430d0194
 }
 
 #pepperoniPizza {
   grid-column: 1;
   grid-row: 1;
 }
-  
+
 /* Navigation style */
 
 nav {
@@ -87,4 +94,3 @@ li a:hover {
 .hamburger-menu {
   float: right;
 }
-  

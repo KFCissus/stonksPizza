@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,7 @@ Route::get('/home', function () {
 Route::get('/winkelwagen', function () {
     return view('winkelwagen');
 });
+Route::post('/order',[OrderController::class,'addOrder']);
 
 
 Route::get('/dashboard', function () {
@@ -42,7 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/status-bestelling', function () {
         return view('status');
     });
-    
+
 });
 
 require __DIR__.'/auth.php';
