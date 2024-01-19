@@ -15,7 +15,7 @@
     <ul>
         @foreach($order->orderline as $orderline)
         <li>
-            {{ $orderline->pizza->name }} - Quantity: {{ $orderline->quantity }}
+           Quantity: {{ $orderline->quantity }}   {{ $orderline->pizza->Name }}
         </li>
     @endforeach
     </ul>
