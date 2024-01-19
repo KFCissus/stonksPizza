@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('session');
             $table->timestamp('date');
-            $table->foreignId('size_id')->references('id')->on('PizzaSize');
+
 
        //     $table->double('TotalPrice');
 

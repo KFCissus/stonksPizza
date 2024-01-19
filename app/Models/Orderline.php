@@ -10,7 +10,7 @@ class Orderline extends Model
     use HasFactory;
     public $timestamps = false;
     protected $table="order_line";
-    protected $fillable = ['quantity','pizzas_id','order_id'];
+    protected $fillable = ['quantity','pizzas_id','order_id','size_id'];
     //protected $unique = ['id'];
 
 

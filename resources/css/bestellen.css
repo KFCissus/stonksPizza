@@ -26,16 +26,25 @@ text-align: center;
   width: 300px;
 }
 
-#productContainer input {
+#productContainer input[type="submit"] {
   border: none;
   padding: 8px 12px;
   border-radius: 8px;
   color: #fff;
   background-color: #6b0000;
   cursor: pointer;
-
 }
-input:hover{
+
+input[type="number"] {
+  border-radius: 8px;
+  width: auto;
+}
+
+select {
+  border-radius: 8px;
+}
+
+input[type="submit"]:hover{
     background-color: #7b0000;
 }
 
