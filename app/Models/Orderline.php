@@ -19,6 +19,10 @@ class Orderline extends Model
         return $this->belongsTo(Order::class)->distinct();
     }
 
+    public function pizza()
+{
+    return $this->belongsTo(Pizza::class, 'pizzas_id');
+}
 
 
     public function price()

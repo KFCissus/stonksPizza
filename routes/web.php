@@ -27,9 +27,8 @@ Route::get('/home', function () {
     return view('homepage');
 });
 
-Route::get('/winkelwagen', function () {
-    return view('winkelwagen');
-});
+Route::get('/winkelwagen', [OrderController::class, 'showCart'])->name('cart.show');
+
 Route::post('/order',[OrderController::class,'addPizzaToOrder']);
 
 

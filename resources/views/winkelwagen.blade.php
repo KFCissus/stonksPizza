@@ -11,12 +11,16 @@
 <body>
     <h1>Winkelwagen bekijken</h1>
 
+    @if($order)
     <ul>
-        <li>Geselecteerde item</li>
-        <li>Pizza naam als voorbeeld</li>
-        <li>Prijs als voorbeeld</li>
-        <li>Grootte als voorbeeld</li>
-        <a href="#">Annuleren</a>
+        @foreach($order->orderline as $orderline)
+        <li>
+            {{ $orderline->pizza->name }} - Quantity: {{ $orderline->quantity }}
+        </li>
+    @endforeach
     </ul>
+@else
+    <p>Your cart is empty.</p>
+@endif
 </body>
 </html>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\Orderline;
 use App\Models\Pizza;
+use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 use function Webmozart\Assert\Tests\StaticAnalysis\null;
 
@@ -41,6 +42,28 @@ class OrderController extends Controller
         //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
         //Pizza::Orderline();
 
+    }
+
+    public function showCart()
+    {
+        // Get the session value
+        $value = session('_token');
+
+        // Find the order associated with the session, eager loading related data
+        $order = Order::with(['orderline' => function ($query) {
+            $query->with('pizza');
+        }])
+            ->where('session', $value)
+            ->first();
+
+        // Check if the order variable is set
+        if (!$order) {
+            // Redirect or handle the case when the order is not found
+            return redirect()->route('cart.show'); // Replace with your actual route
+        }
+
+        // Pass the order data to the cart view
+        return View::make('winkelwagen', ['order' => $order]); // Change 'cart' to 'winkelwagen'
     }
 
     /**
