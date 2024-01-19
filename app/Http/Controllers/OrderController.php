@@ -37,7 +37,7 @@ class OrderController extends Controller
 
 //        $orderline = new Orderline();
         $order->orderline()->create([ 'pizzas_id'=> $pizza['id'],'quantity'=>1, 'order_id'=>$order['id']]);
-        dd($order['id']);
+        // dd($order['id']);
         //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
         //Pizza::Orderline();
 
