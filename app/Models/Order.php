@@ -13,7 +13,7 @@ class Order extends Model
 
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['session','size_id','OrderStatus_id',];
+    protected $fillable = ['session','OrderStatus_id',];
 
    public function orderline()
    {

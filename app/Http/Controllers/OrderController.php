@@ -29,16 +29,35 @@ class OrderController extends Controller
         $id = $request['id'];
         // finds the pizza in the db
         $pizza = Pizza::find($id);
-        //puts the pizza into the order
+        $quantity = $request['quantity'];
+        //puts the pizza into the order\
 
 
+        $size = 0;
+        if($request['size']== "small"){
+            $size = 1;
+        }
+        elseif($request['size']== "medium"){
+            $size = 2;
+        }
+        elseif($request['size']== "large"){
+            $size = 3;
+        }
+        else{
+            echo '<script>alert("oops sometings wrong");</script>';
+        }
 
-       $order = Order::firstOrCreate(['session'=>$value,'size_id' => 1,'OrderStatus_id' => 1]);
+
+       $order = Order::firstOrCreate(['session'=>$value,'OrderStatus_id' => 1]);
 
 
 //        $orderline = new Orderline();
-        $order->orderline()->create([ 'pizzas_id'=> $pizza['id'],'quantity'=>1, 'order_id'=>$order['id']]);
+        $order->orderline()->create([ 'pizzas_id'=> $pizza['id'],'size_id' => $size,'quantity'=>$quantity, 'order_id'=>$order['id']]);
+
+
+
         // dd($order['id']);
+
         //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
         //Pizza::Orderline();
 

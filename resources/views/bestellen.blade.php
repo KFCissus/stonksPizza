@@ -24,16 +24,17 @@
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
         <form method="post" action="/order"         >
             @csrf
-            <select>
+            <select name="size" >
                 <option value="small">Klein</option>
-                <option value="medium">Middel</option>
-                <option value="large">Groot</option>
+                <option  value="medium">Middel</option>
+                <option  value="large">Groot</option>
             </select>
            <br> <br>
            <input type="number" value="1" min="1" max="10" name="quantity">
            <br> <br>
+            <input type="hidden" name="id" value="1">
     <input type="submit" value="pizza bestellen">
-            <input type="hidden" name="id" value="5">
+
     </form>
     </div>
     <div id="hawaiPizza">
@@ -41,16 +42,17 @@
         <p>Deze hawai pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
         <form method="post" action="/order"         >
             @csrf
-            <select>
-                <option value="small">Klein</option>
-                <option value="medium">Middel</option>
-                <option value="large">Groot</option>
+            <select name="size" >
+                <option  value="small">Klein</option>
+                <option  value="medium">Middel</option>
+                <option  value="large">Groot</option>
             </select>
            <br> <br>
            <input type="number" value="1" min="1" max="10" name="quantity">
            <br> <br>
+            <input type="hidden" name="id" value="2">
     <input type="submit" value="pizza bestellen">
-            <input type="hidden" name="id" value="5">
+
     </form>
     </div>
     <div id="olijfPizza">
@@ -58,16 +60,17 @@
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
         <form method="post" action="/order"         >
             @csrf
-            <select>
-                <option value="small">Klein</option>
-                <option value="medium">Middel</option>
+            <select name="size" >
+                <option  value="small">Klein</option>
+                <option  value="medium">Middel</option>
                 <option value="large">Groot</option>
             </select>
            <br> <br>
            <input type="number" value="1" min="1" max="10" name="quantity">
            <br> <br>
+            <input type="hidden" name="id" value="3">
     <input type="submit" value="pizza bestellen">
-            <input type="hidden" name="id" value="5">
+
     </form>
     </div>
     <div id="americanoPizza">
@@ -75,16 +78,17 @@
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
         <form method="post" action="/order"         >
             @csrf
-            <select>
-                <option value="small">Klein</option>
-                <option value="medium">Middel</option>
-                <option value="large">Groot</option>
+            <select name="size" >
+                <option  value="small">Klein</option>
+                <option  value="medium">Middel</option>
+                <option  value="large">Groot</option>
             </select>
            <br> <br>
            <input type="number" value="1" min="1" max="10" name="quantity">
            <br> <br>
+            <input type="hidden" name="id" value="4">
     <input type="submit" value="pizza bestellen">
-            <input type="hidden" name="id" value="5">
+
     </form>
     </div>
     <div id="blauwekaasPizza">
@@ -92,16 +96,17 @@
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
                 <form method="post" action="/order"         >
                     @csrf
-                    <select>
-                        <option value="small">Klein</option>
-                        <option value="medium">Middel</option>
-                        <option value="large">Groot</option>
+                    <select name="size" >
+                        <option  value="small">Klein</option>
+                        <option  value="medium">Middel</option>
+                        <option  value="large">Groot</option>
                     </select>
                    <br> <br>
                    <input type="number" value="1" min="1" max="10" name="quantity">
                    <br> <br>
-            <input type="submit" value="pizza bestellen">
                     <input type="hidden" name="id" value="5">
+            <input type="submit" value="pizza bestellen">
+
             </form>
     </div>
  </div>
