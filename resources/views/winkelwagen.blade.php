@@ -15,8 +15,10 @@
     <ul>
         @foreach($order->orderline as $orderline)
         <li>
-           Quantity: {{ $orderline->quantity }}   {{ $orderline->pizza->Name }}
+            Pizza: {{ $orderline->pizza->Name }} <br>
+           Hoeveelheid: {{ $orderline->quantity }}  
         </li>
+        <br>
     @endforeach
     </ul>
 @else
