@@ -61,6 +61,8 @@ class OrderController extends Controller
         //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
         //Pizza::Orderline();
 
+        return redirect('/winkelwagen');
+
     }
 
     public function showCart()
