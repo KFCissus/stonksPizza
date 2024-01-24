@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/80bfb3b6e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    @if($order)
+    
     <h1>Pizza Tracking</h1>
     <div id="statusGrid">
         <div id="columnBetaald">
@@ -28,6 +30,11 @@
             <i class="fa-solid fa-truck-front"></i>
         </div>
     </div>
+
+    @else
+    <p>U heeft niks besteld! Ga naar <a href="/bestellen">bestellen</a> om een pizza toe te voegen.</p>
+@endif
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {

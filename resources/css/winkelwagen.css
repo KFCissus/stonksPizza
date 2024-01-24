@@ -25,16 +25,10 @@ li {
     border-radius: 10px;
 }
 
-a {
-    color: #fff;
-    text-decoration: none;
-    background-color: #555;
-    padding: 8px 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-a:hover {
-    background-color: #777;
+button {
+    background-color: #adadad;
+    height: 40px;
+    width: auto;
+    padding: 4px 8px;
+    border-radius: 12px;
 }

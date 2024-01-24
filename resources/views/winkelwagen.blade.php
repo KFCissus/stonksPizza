@@ -20,9 +20,11 @@
         </li>
         <br>
     @endforeach
+    <a href="{{ route('order.status') }}"><button>Status bekijken</button></a>
+
     </ul>
 @else
-    <p>Your cart is empty.</p>
+    <p>U heeft niks besteld!</p>
 @endif
 </body>
 </html>

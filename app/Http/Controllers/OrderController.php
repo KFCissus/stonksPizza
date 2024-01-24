@@ -67,25 +67,36 @@ class OrderController extends Controller
 
     public function showCart()
     {
-        // Get the session value
         $value = session('_token');
-
-        // Find the order associated with the session, eager loading related data
+    
         $order = Order::with(['orderline' => function ($query) {
             $query->with('pizza');
         }])
             ->where('session', $value)
             ->first();
-
-        // Check if the order variable is set
-        if (!$order) {
-            // Redirect or handle the case when the order is not found
-            return redirect()->route('cart.show'); // Replace with your actual route
-        }
-
-        // Pass the order data to the cart view
-        return View::make('winkelwagen', ['order' => $order]); // Change 'cart' to 'winkelwagen'
+    
+        // Order data in de winkelwagen view
+        return view('winkelwagen', ['order' => $order]);
     }
+
+    public function redirectToOrderStatus()
+{
+    $value = session('_token');
+
+    // Order met session
+    $order = Order::with(['orderline' => function ($query) {
+        $query->with('pizza');
+    }])
+        ->where('session', $value)
+        ->first();
+    // Eventueel order data krijgen in de status view
+    // dd($order);
+    return view('status', ['order' => $order]);
+}
+
+    
+    
+
 
     /**
      * Show the form for creating a new resource.
