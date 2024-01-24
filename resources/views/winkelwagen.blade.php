@@ -20,37 +20,18 @@
             <th>total price</th>
         </tr>
         @foreach($order->orderline as $orderline)
-<<<<<<< HEAD
-            <tr>
-                <th> {{ $orderline->quantity }} </th>
-                <th> {{ $orderline->pizza->Name }}</th>
-                <th> {{ $orderline->pizzasize->size }} </th>
-                <th> {{ $orderline->quantity }} </th>
-                <th>
-                    <form method="post" action="/deleteorderline">
-                        <input type="submit" value="?">
-                        <input type="submit" value="verwijder bestelling regel">
-                    </form>
-
-                </th>
-
-
-            </tr>
-
-
-
-
-=======
         <li>
             Pizza: {{ $orderline->pizza->Name }} <br>
            Hoeveelheid: {{ $orderline->quantity }}  
         </li>
         <br>
->>>>>>> 68e9a086ec72d0e36d20e257055cba5e569f88fd
     @endforeach
     </table>
+    <a href="{{ route('order.status') }}"><button>Status bekijken</button></a>
+
+    </ul>
 @else
-    <p>Your cart is empty.</p>
+    <p>U heeft niks besteld!</p>
 @endif
 </body>
 </html>

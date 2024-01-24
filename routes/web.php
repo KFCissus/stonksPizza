@@ -41,10 +41,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/order-status', function () {
-        return view('status');
-    });
 
+    // Use the 'order.status' route name for order-status
+    Route::get('/order-status', [OrderController::class, 'redirectToOrderStatus'])->name('order.status');
 });
 
 require __DIR__.'/auth.php';

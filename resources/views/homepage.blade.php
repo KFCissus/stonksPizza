@@ -38,7 +38,7 @@
             <img src="https://i.pinimg.com/originals/04/88/32/04883229aaa10693e1966b39142ad4a9.png" alt="ladyimage" height="500px">
             <a href="/bestellen">Eten bestellen</a>
             <a href="#">Reserveren</a>
-              <a href="/status-bestelling">Status bestelling</a>
+              <a href="/order-status">Status bestelling</a>
               <a href="/dashboard">Account beheren</a>
             <a href="#">Contact</a>
           </div>

@@ -68,7 +68,6 @@ class OrderController extends Controller
 
     public function showCart()
     {
-        // Get the session value
         $value = session('_token');
 
 
@@ -88,9 +87,24 @@ class OrderController extends Controller
             return redirect()->route('cart.show'); // Replace with your actual route
         }
 
-        // Pass the order data to the cart view
-        return View::make('winkelwagen', ['order' => $order]); // Change 'cart' to 'winkelwagen'
-    }
+    public function redirectToOrderStatus()
+{
+    $value = session('_token');
+
+    // Order met session
+    $order = Order::with(['orderline' => function ($query) {
+        $query->with('pizza');
+    }])
+        ->where('session', $value)
+        ->first();
+    // Eventueel order data krijgen in de status view
+    // dd($order);
+    return view('status', ['order' => $order]);
+}
+
+    
+    
+
 
     /**
      * Show the form for creating a new resource.
