@@ -20,6 +20,7 @@
             <th>total price</th>
         </tr>
         @foreach($order->orderline as $orderline)
+<<<<<<< HEAD
             <tr>
                 <th> {{ $orderline->quantity }} </th>
                 <th> {{ $orderline->pizza->Name }}</th>
@@ -39,6 +40,13 @@
 
 
 
+=======
+        <li>
+            Pizza: {{ $orderline->pizza->Name }} <br>
+           Hoeveelheid: {{ $orderline->quantity }}  
+        </li>
+        <br>
+>>>>>>> 68e9a086ec72d0e36d20e257055cba5e569f88fd
     @endforeach
     </table>
 @else

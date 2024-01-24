@@ -22,7 +22,7 @@
     <div id="pepperoniPizza">
         <img src="https://static.vecteezy.com/system/resources/previews/010/793/986/original/pepperoni-pizza-isolated-with-clipping-path-png.png" rel="pepperoni">
         <p>Deze pepperoni pizza is super duper duper lekker, dus koop deze nu en het wordt snel bezorgd.</p>
-        <form method="post" action="/order"         >
+        <form method="post" action="/order">
             @csrf
             <select name="size" >
                 <option value="small">Klein</option>

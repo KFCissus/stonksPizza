@@ -14,7 +14,11 @@ h1 {
     border-bottom: 2px solid #fff;
 }
 
+<<<<<<< HEAD
 table {
+=======
+li {
+>>>>>>> 68e9a086ec72d0e36d20e257055cba5e569f88fd
     list-style: none;
     padding: 0;
     margin: 0;
@@ -26,6 +30,7 @@ table {
 }
 tr{
 
+<<<<<<< HEAD
     margin: 5px 0;
 }
 th {
@@ -33,6 +38,8 @@ th {
 
 }
 
+=======
+>>>>>>> 68e9a086ec72d0e36d20e257055cba5e569f88fd
 a {
     color: #fff;
     text-decoration: none;

@@ -62,6 +62,8 @@ class OrderController extends Controller
         //Pizza::Orderline();
         return view('bestellen');
 
+        return redirect('/winkelwagen');
+
     }
 
     public function showCart()
