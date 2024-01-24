@@ -19,10 +19,12 @@ class Order extends Model
    {
        return $this->hasMany(Orderline::class);
    }
-   public function pizza()
-   {
-       return $this->hasMany('Pizza');
-   }
+//   public function pizza()
+//   {
+//       return $this->hasMany('Pizza');
+//   }
+
+
 
     public function customer()
     {

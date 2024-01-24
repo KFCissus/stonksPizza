@@ -19,6 +19,6 @@ class PizzaSizeSeeder extends Seeder
         ['id'=>null,'size'=>'large','baseprice'=>4]
     ];
 
-        DB::table('pizzasize')->insert($pizzasizes);
+        DB::table('pizza_sizes')->insert($pizzasizes);
     }
 }

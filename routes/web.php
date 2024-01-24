@@ -21,15 +21,16 @@ Route::get('/', function () {
 
 Route::get('/bestellen', function () {
     return view('bestellen');
-});
+})->middleware('auth');
 
 Route::get('/home', function () {
     return view('homepage');
 });
 
-Route::get('/winkelwagen', [OrderController::class, 'showCart'])->name('cart.show');
+Route::get('/winkelwagen', [OrderController::class, 'showCart'])->name('cart.show')->middleware('auth');
 
 Route::post('/order',[OrderController::class,'addPizzaToOrder']);
+Route::post('/deleteorderline',[OrderController::class,'deleteorderline']);
 
 
 Route::get('/dashboard', function () {

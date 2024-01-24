@@ -14,7 +14,7 @@ h1 {
     border-bottom: 2px solid #fff;
 }
 
-ul {
+table {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -24,9 +24,13 @@ ul {
     padding: 15px;
     border-radius: 10px;
 }
+tr{
 
-li {
     margin: 5px 0;
+}
+th {
+    margin: 5px 0;
+
 }
 
 a {

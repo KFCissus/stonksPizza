@@ -12,13 +12,35 @@
     <h1>Winkelwagen bekijken</h1>
 
     @if($order)
-    <ul>
+    <table>
+        <tr >
+            <th>Quantity </th>
+            <th>Name     </th>
+            <th>Size</th>
+            <th>total price</th>
+        </tr>
         @foreach($order->orderline as $orderline)
-        <li>
-           Quantity: {{ $orderline->quantity }}   {{ $orderline->pizza->Name }}
-        </li>
+            <tr>
+                <th> {{ $orderline->quantity }} </th>
+                <th> {{ $orderline->pizza->Name }}</th>
+                <th> {{ $orderline->pizzasize->size }} </th>
+                <th> {{ $orderline->quantity }} </th>
+                <th>
+                    <form method="post" action="/deleteorderline">
+                        <input type="submit" value="?">
+                        <input type="submit" value="verwijder bestelling regel">
+                    </form>
+
+                </th>
+
+
+            </tr>
+
+
+
+
     @endforeach
-    </ul>
+    </table>
 @else
     <p>Your cart is empty.</p>
 @endif

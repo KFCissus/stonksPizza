@@ -60,6 +60,7 @@ class OrderController extends Controller
 
         //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
         //Pizza::Orderline();
+        return view('bestellen');
 
     }
 
@@ -68,12 +69,16 @@ class OrderController extends Controller
         // Get the session value
         $value = session('_token');
 
+
         // Find the order associated with the session, eager loading related data
         $order = Order::with(['orderline' => function ($query) {
             $query->with('pizza');
+            $query->with('pizzasize');
+
         }])
             ->where('session', $value)
             ->first();
+
 
         // Check if the order variable is set
         if (!$order) {
@@ -88,9 +93,9 @@ class OrderController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function deleteorderline($id)
     {
-        //
+        db:destroy($id);
     }
 
     /**
