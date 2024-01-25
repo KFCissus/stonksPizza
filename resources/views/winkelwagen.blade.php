@@ -40,6 +40,8 @@
 
     @endforeach
     </table>
+    <a href="{{ route('order.status') }}"><button>Status bekijken</button></a>
+
 @else
     <p>Your cart is empty.</p>
 @endif
