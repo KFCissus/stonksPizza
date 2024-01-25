@@ -20,7 +20,7 @@
         </li>
         <br>
     @endforeach
-    <a href="{{ route('order.status') }}"><button>Status bekijken</button></a>
+    <a href="{{ route('order.status') }}"><button><i class="fa-solid fa-truck-fast"></i> Status bekijken</button></a>
 
     </ul>
 @else
