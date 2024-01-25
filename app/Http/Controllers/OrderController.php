@@ -60,6 +60,7 @@ class OrderController extends Controller
 
         //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
         //Pizza::Orderline();
+        return view('bestellen');
 
         return redirect('/winkelwagen');
 
@@ -68,16 +69,23 @@ class OrderController extends Controller
     public function showCart()
     {
         $value = session('_token');
-    
+
+
+        // Find the order associated with the session, eager loading related data
         $order = Order::with(['orderline' => function ($query) {
             $query->with('pizza');
+            $query->with('pizzasize');
+
         }])
             ->where('session', $value)
             ->first();
-    
-        // Order data in de winkelwagen view
-        return view('winkelwagen', ['order' => $order]);
-    }
+
+
+        // Check if the order variable is set
+        if (!$order) {
+            // Redirect or handle the case when the order is not found
+            return redirect()->route('cart.show'); // Replace with your actual route
+        }
 
     public function redirectToOrderStatus()
 {
@@ -101,9 +109,9 @@ class OrderController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function deleteorderline($id)
     {
-        //
+        db:destroy($id);
     }
 
     /**

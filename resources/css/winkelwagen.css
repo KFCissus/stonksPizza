@@ -1,10 +1,11 @@
 body {
-    margin-left: 15px;
+    margin: 0;
     height: 100vh;
     background-color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
+/*test*/
 
 h1 {
     color: black;
@@ -14,12 +15,9 @@ h1 {
     border-bottom: 2px solid #fff;
 }
 
-p {
-    margin-left: 15px;
-    color: black;
-}
+table {
+=======
 
-li {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -29,12 +27,33 @@ li {
     padding: 15px;
     border-radius: 10px;
 }
+tr{
+
+
+    margin: 5px 0;
+}
+th {
+    margin: 5px 0;
+
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #555;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #777;
+}
+
 
 button {
-    cursor: pointer;
-    border: none;
-    background-color: rgb(196, 135, 135);
-    color: #fff;
+    background-color: #adadad;
     height: 40px;
     width: auto;
     padding: 4px 8px;

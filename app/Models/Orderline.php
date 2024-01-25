@@ -18,6 +18,10 @@ class Orderline extends Model
     {
         return $this->belongsTo(Order::class)->distinct();
     }
+    public function pizzasize()
+    {
+        return $this->hasOne(PizzaSize::class,  'id','size_id');
+    }
 
     public function pizza()
 {

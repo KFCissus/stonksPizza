@@ -16,7 +16,7 @@ return new class extends Migration
             $table->bigInteger('quantity');
             $table->foreignId('pizzas_id')->references('id')->on('pizzas');
             $table->foreignId('order_id')->references('id')->on('orders');
-            $table->foreignId('size_id')->references('id')->on('PizzaSize');
+            $table->foreignId('size_id')->references('id')->on('Pizza_Sizes');
 
         });
     }
