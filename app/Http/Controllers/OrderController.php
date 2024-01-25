@@ -12,7 +12,7 @@ use function Webmozart\Assert\Tests\StaticAnalysis\null;
 
 class OrderController extends Controller
 {
-
+//test
 
     /**
      * Display a listing of the resource.
@@ -62,7 +62,7 @@ class OrderController extends Controller
         //Pizza::Orderline();
         return view('bestellen');
 
-        return redirect('/winkelwagen');
+       // return redirect('/winkelwagen');
 
     }
 
@@ -76,16 +76,17 @@ class OrderController extends Controller
             $query->with('pizza');
             $query->with('pizzasize');
 
-        }])
-            ->where('session', $value)
-            ->first();
+        }])->where('session', $value)->first();
 
 
         // Check if the order variable is set
-        if (!$order) {
+
             // Redirect or handle the case when the order is not found
-            return redirect()->route('cart.show'); // Replace with your actual route
-        }
+        return View::make('winkelwagen', ['order' => $order]);
+
+
+
+    }
 
     public function redirectToOrderStatus()
 {
@@ -102,8 +103,8 @@ class OrderController extends Controller
     return view('status', ['order' => $order]);
 }
 
-    
-    
+
+
 
 
     /**
@@ -111,7 +112,7 @@ class OrderController extends Controller
      */
     public function deleteorderline($id)
     {
-        db:destroy($id);
+        
     }
 
     /**
