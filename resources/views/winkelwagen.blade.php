@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Winkelwagen bekijken</h1>
-
+{{--test--}}
 @if($order)
     <table>
         <tr >
