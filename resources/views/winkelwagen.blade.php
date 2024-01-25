@@ -9,9 +9,9 @@
     <script src="https://kit.fontawesome.com/80bfb3b6e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Winkelwagen bekijken</h1>
-
-    @if($order)
+<h1>Winkelwagen bekijken</h1>
+{{--test--}}
+@if($order)
     <table>
         <tr >
             <th>Quantity </th>
@@ -40,9 +40,6 @@
 
     @endforeach
     </table>
-    <a href="{{ route('order.status') }}"><button>Status bekijken</button></a>
-
-    </ul>
 @else
     <p>Your cart is empty.</p>
 @endif
