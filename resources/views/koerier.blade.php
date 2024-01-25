@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-  @vite('resources/css/home.css')
+  @vite('resources/css/koerier.css')
 </head>
 
 <body>
@@ -38,7 +38,7 @@
             <img src="https://i.pinimg.com/originals/04/88/32/04883229aaa10693e1966b39142ad4a9.png" alt="ladyimage" height="500px">
             <a href="/bestellen">Eten bestellen</a>
             <a href="#">Reserveren</a>
-              <a href="/order-status">Status bestelling</a>
+              <a href="/status-bestelling">Status bestelling</a>
               <a href="/dashboard">Account beheren</a>
             <a href="#">Contact</a>
             <a href="/koerier">Koerier</a>
@@ -58,82 +58,34 @@
         <br>
     </div>
 
-    <div class="text-block">
-        <h2>We hopen u in ontvangst te nemen</h2>
-        <p>Geniet onbeperkt en zonder tijdslimiet van onze Europese en Aziatische specialiteiten. In een gemoedelijke
-            sfeer
-            gaat u samen met uw gezelschap op culinaire ontdekkingsreis.
-
-            Onze gerechten zijn geïnspireerd op de Europese en Aziatische keuken. De keukenbrigade heeft de authentieke
-            Aziatische kookkunsten in hun bloed zitten. Denk hierbij aan traditionele Kantonese smaken, maar ook sushi
-            en
-            Szechuan gerechten. Samen met de Europese invloeden kunt u rekenen op een echte Asian-Fusion ervaring
-
-            Wij heten u van harte welkom om eens te komen proeven en ervaren.</p>
-    </div> <br>
-    <div class="video-block">
-<video src="../restaurant_mellemrum_-_kitchen (1080p).mp4" controls autoplay loop muted></video>
+    <div class="koerier-container">
+        <!-- Your koerier items go here -->
+        <div class="koerier-item unchecked">
+            <a href="/koerier-item-1"> <!-- Add the desired URL for the first image -->
+                <img src="/images/scooter.jpg" alt="Image 1">
+            </a>
+            <p>Scooter 1</p><p id="koerierPageText"></p>
+        </div>
+        <div class="koerier-item unchecked">
+            <a href="/koerier-item-2"> <!-- Add the desired URL for the second image -->
+                <img src="/images/scooter.jpg" alt="Image 2">
+            </a>
+            <p>Scooter 2</p><p id="koerierPageText"></p>
+        </div>
+        <div class="koerier-item unchecked">
+            <a href="/koerier-item-3"> <!-- Add the desired URL for the third image -->
+                <img src="/images/scooter.jpg" alt="Image 3">
+            </a>
+            <p>Scooter 3</p><p id="koerierPageText"></p>
+        </div>
+        <div class="koerier-item unchecked">
+            <a href="/koerier-item-4"> <!-- Add the desired URL for the fourth image -->
+                <img src="/images/scooter.jpg" alt="Image 4">
+            </a>
+            <p>Scooter 4</p><p id="koerierPageText"></p>
+        </div>
     </div>
 
-    <div id="menukaart" class="text-block">
-        <h2>Bekijk onze menukaart!</h2>
-        <p>Ons restaurant heeft een uitgebreid en gevarieerd menu met heerlijke gerechten om uit te kiezen. Door ons
-            menu te
-            downloaden, heeft u altijd een duidelijk overzicht van alle beschikbare opties, zodat u gemakkelijk kunt
-            beslissen
-            wat u wilt bestellen. Bovendien kunt u ons menu ook thuis of onderweg bekijken, zodat u altijd op de hoogte
-            bent
-            van wat we te bieden hebben.
-
-            Daarnaast kunt u met het gedownloade menu ook gemakkelijk de allergie-informatie en prijzen van de gerechten
-            raadplegen, zodat u goed geïnformeerd kunt zijn voordat u naar ons restaurant komt.</p> <br>
-        <a href="/bestellen" id="menu-button" class="notification">
-            <span>Bekijken</span>
-            <span class="badge">Vernieuwd!</span>
-        </a>
-    </div>
-    <br>
-    <div class="foto-block">
-        <a target="_blank" href="img/banken.jpg" class="invisbleA">
-            <img src="https://dejavu-veldhoven.nl/wp-content/uploads/2022/04/MES05997-HDR.jpg" alt="banken" width="380">
-        </a>
-        <a target="_blank" href="img/drank.jpg" class="invisbleA">
-            <img src="https://dejavu-veldhoven.nl/wp-content/uploads/2022/05/MES06160.jpg" alt="drank" width="380">
-        </a>
-        <a target="_blank" href="img/tafels.jpg" class="invisbleA">
-            <img src="https://dejavu-veldhoven.nl/wp-content/uploads/2022/04/MES05937-HDR-1.jpg" alt="tafels" width="380">
-        </a>
-    </div>
-    <div class="text-block">
-        <h2>Geniet van onze heerlijke gerechten</h2>
-        <p>Het Franse en Aziatische keuken zijn beide bekend om hun gepassioneerde aanpak van voeding en hun focus op
-            kwaliteit van ingrediënten. Een gerecht met een Franse en Aziatische twist kan een leuke en interessante
-            manier
-            zijn om deze twee culturen te combineren en nieuwe smaken te creëren.
-
-            Een voorbeeld van een heerlijk gerecht met een Franse en Aziatische twist is een geroosterde kip met een
-            saus
-            gemaakt van citroengras, kokosmelk en limoenblaadjes. De kip wordt geroosterd totdat het krokant is aan de
-            buitenkant en zacht en smaakvol aan de binnenkant. De saus geeft het gerecht een frisse en pittige smaak die
-            perfect bij de geroosterde kip past.
-
-            Een ander voorbeeld van een lekker gerecht met een Franse en Aziatische twist is gestoomde vis met een saus
-            gemaakt van gember, knoflook en koriander. De vis wordt gestoomd totdat het zacht en sappig is en de saus
-            geeft
-            het gerecht een heerlijke, subtiele smaak. Dit gerecht is niet alleen lekker, maar ook gezond en een goede
-            bron
-            van eiwitten en gezonde vetten.</p>
-    </div>
-    <br>
-  <br>
-    <div id="reserveren-block" class="text-block">
-        <h2>Reserveren kan gemakkelijk online!</h2>
-        <p>Via onze website is reserveren 24/7 mogelijk. Klik <a href="https://wwc.resengo.com/">hier</a> om online te
-            reserveren. Of
-            bel ons gewoon even: <a href="tel:+31615321479">+31615321479</a>.
-        </p>
-        <br>
-    </div>
     </article>
     <footer>
         <br>
@@ -183,7 +135,19 @@ function closeNav() {
     document.querySelector(".hamburger-menu").style.display = "block";
 }
 
+window.onload = function () {
+            var password = prompt("Vul het wachtwoord in:", "");
+
+            if (password === "koerier") {
+                // Correct password, do nothing
+            } else {
+                alert("Wachtwoord onjuist.");
+                window.location.href = "/home";
+            }
+        };
+
     </script>
 </body>
 
 </html>
+
