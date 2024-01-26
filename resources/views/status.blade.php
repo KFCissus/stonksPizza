@@ -11,7 +11,7 @@
 <body>
     @if($order)
     
-    <h1>Pizza Tracking</h1>
+    <h1>Pizza Status</h1>
     <div id="statusGrid">
         <div id="columnBetaald">
             <h1>Betaald</h1>
