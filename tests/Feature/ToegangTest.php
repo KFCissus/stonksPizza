@@ -3,14 +3,22 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class ToegangTest extends TestCase
 {
     /**
-     * A basic test example.
+     * A basic feature test example.
      */
-    public function toegangTotBestellenNietIngelogd()
+    public function test_example(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
+    public function toegangTotBestellenNietIngelogd(): void
     {
         $response = $this->get('/bestellen');
 
