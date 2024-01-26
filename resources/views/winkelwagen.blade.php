@@ -42,6 +42,7 @@
     </table>
     <h1>Totaal prijs: €{{$order->price()}}</h1>
     <a href="{{ route('order.status') }}">Status bekijken</a>
+    <a href="/bestellen">Terug naar bestellen</a>
 
 @else
     <p>Your cart is empty.</p>
