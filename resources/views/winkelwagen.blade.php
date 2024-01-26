@@ -17,18 +17,18 @@
             <th>Hoeveelheid </th>
             <th>Naam     </th>
             <th>Grootte</th>
-            <th>totaal regel prijs</th>
+            <th>Totaal regel prijs</th>
         </tr>
         @foreach($order->orderline as $orderline)
             <tr>
                 <th> {{ $orderline->quantity }} </th>
                 <th> {{ $orderline->pizza->Name }}</th>
                 <th> {{ $orderline->pizzasize->size }} </th>
-                <th> {{ $orderline->lineprice() }} </th>
+                <th> €{{ $orderline->lineprice() }} </th>
                 <th>
                     <form method="post" action="/deleteorderline">
                         <input type="submit" value="?">
-                        <input type="submit" value="verwijder bestelling regel">
+                        <input type="submit" value="Verwijder item">
                     </form>
 
                 </th>
@@ -40,8 +40,8 @@
 
     @endforeach
     </table>
-    <h1>totaal prijs:{{$order->price()}}</h1>
-    <a href="{{ route('order.status') }}"><button>Status bekijken</button></a>
+    <h1>Totaal prijs: €{{$order->price()}}</h1>
+    <a href="{{ route('order.status') }}">Status bekijken</a>
 
 @else
     <p>Your cart is empty.</p>
