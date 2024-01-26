@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('Order_line', function (Blueprint $table) {
            // DO NOT ADD here $table->increments('id');
+            $table->id();
             $table->bigInteger('quantity');
             $table->foreignId('pizzas_id')->references('id')->on('pizzas');
             $table->foreignId('order_id')->references('id')->on('orders');

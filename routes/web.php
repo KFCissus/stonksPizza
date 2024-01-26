@@ -42,10 +42,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-<<<<<<< Updated upstream
+
     // Use the 'order.status' route name for order-status
     Route::get('/order-status', [OrderController::class, 'redirectToOrderStatus'])->name('order.status');
-=======
+
     Route::get('/koerier', function () {
         return view('koerier');
     })->name('koerier');
@@ -72,7 +72,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/track-and-trace', function () {
         return view('track-and-trace');
     });
->>>>>>> Stashed changes
+
 });
 
 require __DIR__.'/auth.php';
