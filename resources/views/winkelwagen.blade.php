@@ -27,7 +27,7 @@
                 <th> {{ $orderline->lineprice() }} </th>
                 <th>
                     <form method="post" action="/deleteorderline">
-                        <input type="hidden" value="">
+                        <input type="submit" value="?">
                         <input type="submit" value="verwijder bestelling regel">
                     </form>
 

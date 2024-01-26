@@ -1,28 +1,26 @@
 body {
+    text-align: center;
     margin: 0;
     height: 100vh;
-    background-color: #fff;
+    background: linear-gradient(180deg, #bb0000 0%, #922929 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
 /*test*/
 
 h1 {
-    color: black;
+    color: #fff;
     margin-left: 15px;
     font-size: 2rem;
     padding: 20px;
-    border-bottom: 2px solid #fff;
 }
 
 table {
-
+    margin-left: 450px  ;
     list-style: none;
     padding: 0;
-    margin: 0;
-    background: linear-gradient(180deg, #bb0000 0%, #922929 100%);
-    border: 2px solid #ffffff;
-    margin: 15px;
+    background: linear-gradient(180deg, #f97f7f 0%, #c32d2d 100%);
+    border: none;
     padding: 15px;
     border-radius: 10px;
 }
@@ -32,29 +30,28 @@ tr{
     margin: 5px 0;
 }
 th {
-    margin: 5px 0;
-
+    padding: 10px;
 }
 
 a {
     color: #fff;
     text-decoration: none;
-    background-color: #555;
+    background-color: #000000;
     padding: 8px 15px;
     border-radius: 5px;
+    margin-left: 15px;
     margin-top: 10px;
     display: inline-block;
 }
 
 a:hover {
-    background-color: #777;
+    background-color: #000000;
 }
 
-
-button {
-    background-color: #adadad;
-    height: 40px;
-    width: auto;
-    padding: 4px 8px;
-    border-radius: 12px;
+input[type="submit"] {
+    padding: 8px 8px;
+    border: none;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
 }

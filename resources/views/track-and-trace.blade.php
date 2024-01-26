@@ -25,8 +25,8 @@
     <div class="hero-image">
         <nav>
             <ul>
-                <li id="active"><a href="#"> <i class="fa-solid fa-house"></i> Huis</a></li>
-                <li><a href="#menukaart"> <i class="fa-solid fa-utensils"></i> Menukaart</a></li>
+                <li id="active"><a href="/home"> <i class="fa-solid fa-house"></i> Huis</a></li>
+                <li><a href="/home/#menukaart"> <i class="fa-solid fa-utensils"></i> Menukaart</a></li>
                 <li><a href="#"> <i class="fa-solid fa-book"></i> Boek een tafel</a>
                 </li>
               <li class="hamburger-menu"><a href="javascript:void(0);" onclick="openNav()"><i class="fa-solid fa-bars"></i> Bekijk meer</a></li>
