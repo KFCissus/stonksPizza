@@ -16,7 +16,7 @@ h1 {
 }
 
 table {
-    margin-left: 400px  ;
+    margin-left: 450px  ;
     list-style: none;
     padding: 0;
     background: linear-gradient(180deg, #f97f7f 0%, #c32d2d 100%);
@@ -46,4 +46,12 @@ a {
 
 a:hover {
     background-color: #000000;
+}
+
+input[type="submit"] {
+    padding: 8px 8px;
+    border: none;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
 }

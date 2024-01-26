@@ -54,7 +54,7 @@ class OrderController extends Controller
 //        $orderline = new Orderline();
         $order->orderline()->create([ 'pizzas_id'=> $pizza['id'],'size_id' => $size,'quantity'=>$quantity, 'order_id'=>$order['id']]);
 
-
+        
 
         // dd($order['id']);
 

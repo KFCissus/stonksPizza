@@ -28,7 +28,7 @@
                 <th>
                     <form method="post" action="/deleteorderline">
                         <input type="hidden" value="?">
-                        <input type="submit" value="verwijder bestelling regel">
+                        <input type="submit" value="Verwijder item">
                     </form>
 
                 </th>
@@ -42,6 +42,7 @@
     </table>
     <h1>Totaal prijs: €{{$order->price()}}</h1>
     <a href="{{ route('order.status') }}">Status bekijken</a>
+    <a href="/bestellen">Terug naar bestellen</a>
 
 @else
     <p>Uw winkelwagen is leeg!</p>

@@ -73,6 +73,7 @@ li a:hover {
 /* Overlay navigation */
 
 .koerier-container {
+    margin-left: 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
