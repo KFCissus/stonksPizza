@@ -33,7 +33,23 @@ class Order extends Model
 
     public function price()
     {
+        $value = session('_token');
 
+        $order = Order::with(['orderline' => function ($query) {
+            $query->with('pizza');
+            $query->with('pizzasize');
+
+        }])->where('session', $value)->first();
+
+        $totalprice=0.0;
+
+        foreach($order->orderline as $orderline){
+            $totalprice+= $orderline->lineprice();
+
+
+        }
+
+        return $totalprice;
     }
 
 }

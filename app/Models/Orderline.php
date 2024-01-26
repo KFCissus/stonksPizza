@@ -29,9 +29,14 @@ class Orderline extends Model
 }
 
 
-    public function price()
+    public function lineprice()
     {
 
+        $quantity =  $this->quantity;
+        $baseprice = $this->pizzasize->basePrice;
+        $pizzaprice = $this->pizza->Prijs;
+
+        return ($baseprice + $pizzaprice)*$quantity;
 
     }
 }

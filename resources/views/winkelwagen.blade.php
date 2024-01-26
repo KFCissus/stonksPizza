@@ -14,17 +14,17 @@
 @if($order)
     <table>
         <tr >
-            <th>Quantity </th>
-            <th>Name     </th>
-            <th>Size</th>
-            <th>total price</th>
+            <th>Hoeveelheid </th>
+            <th>Naam     </th>
+            <th>Grootte</th>
+            <th>totaal regel prijs</th>
         </tr>
         @foreach($order->orderline as $orderline)
             <tr>
                 <th> {{ $orderline->quantity }} </th>
                 <th> {{ $orderline->pizza->Name }}</th>
                 <th> {{ $orderline->pizzasize->size }} </th>
-                <th> {{ $orderline->quantity }} </th>
+                <th> {{ $orderline->lineprice() }} </th>
                 <th>
                     <form method="post" action="/deleteorderline">
                         <input type="submit" value="?">
@@ -40,6 +40,7 @@
 
     @endforeach
     </table>
+    <h1>totaal prijs:{{$order->price()}}</h1>
     <a href="{{ route('order.status') }}"><button>Status bekijken</button></a>
 
 @else

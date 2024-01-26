@@ -79,6 +79,11 @@ class OrderController extends Controller
         }])->where('session', $value)->first();
 
 
+
+
+
+
+
         // Check if the order variable is set
 
             // Redirect or handle the case when the order is not found
@@ -98,6 +103,7 @@ class OrderController extends Controller
     }])
         ->where('session', $value)
         ->first();
+
     // Eventueel order data krijgen in de status view
     // dd($order);
     return view('status', ['order' => $order]);
@@ -112,7 +118,7 @@ class OrderController extends Controller
      */
     public function deleteorderline($id)
     {
-        
+
     }
 
     /**
