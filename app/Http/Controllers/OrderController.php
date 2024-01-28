@@ -9,6 +9,7 @@ use App\Models\Pizza;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 use function Webmozart\Assert\Tests\StaticAnalysis\null;
+use Illuminate\Support\Facades\Session;
 
 class OrderController extends Controller
 {
@@ -23,6 +24,8 @@ class OrderController extends Controller
     }
     public function addPizzaToOrder(Request $request)
     {
+
+
         //$value = session('key', 'default');
         $value = session('_token');
         //get the id of the pizza
@@ -51,10 +54,13 @@ class OrderController extends Controller
        $order = Order::firstOrCreate(['session'=>$value,'OrderStatus_id' => 1]);
 
 
+        Session::push('order',$order);
+
+
 //        $orderline = new Orderline();
         $order->orderline()->create([ 'pizzas_id'=> $pizza['id'],'size_id' => $size,'quantity'=>$quantity, 'order_id'=>$order['id']]);
 
-        
+
 
         // dd($order['id']);
 
@@ -70,19 +76,12 @@ class OrderController extends Controller
     {
         $value = session('_token');
 
-
         // Find the order associated with the session, eager loading related data
         $order = Order::with(['orderline' => function ($query) {
             $query->with('pizza');
             $query->with('pizzasize');
 
         }])->where('session', $value)->first();
-
-
-
-
-
-
 
         // Check if the order variable is set
 
@@ -116,9 +115,22 @@ class OrderController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function deleteorderline($id)
+    public function deleteorderline(Request $request)
     {
+        $value = session('_token');
 
+        Orderline::destroy($request['id']);
+
+        // Find the order associated with the session, eager loading related data
+        $order = Order::with(['orderline' => function ($query) {
+            $query->with('pizza');
+            $query->with('pizzasize');
+
+        }])->where('session', $value)->first();
+
+
+
+        return view('/winkelwagen',['order'=>$order]);
     }
 
     /**

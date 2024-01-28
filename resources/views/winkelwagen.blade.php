@@ -11,6 +11,8 @@
 <body>
 <h1>Winkelwagen bekijken</h1>
 {{--test--}}
+
+
 @if($order)
     <table>
         <tr >
@@ -27,7 +29,8 @@
                 <th> €{{ $orderline->lineprice() }} </th>
                 <th>
                     <form method="post" action="/deleteorderline">
-                        <input type="submit" value="?">
+                        @csrf
+                        <input type="hidden" name="id" value="{{$orderline->id}}">
                         <input type="submit" value="Verwijder item">
                     </form>
 

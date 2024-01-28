@@ -14,7 +14,7 @@ class Orderline extends Model
     //protected $unique = ['id'];
 
 
-    public function orderLine()
+    public function order()
     {
         return $this->belongsTo(Order::class)->distinct();
     }
