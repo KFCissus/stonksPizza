@@ -40,6 +40,7 @@
             <a href="#">Reserveren</a>
               <a href="/order-status">Status bestelling</a>
               <a href="/dashboard">Account beheren</a>
+              <a href="/profile">Pizza Points</a>
             <a href="#">Contact</a>
             <a href="/koerier">Koerier</a>
             <a href="/track-and-trace">Track and trace</a>
