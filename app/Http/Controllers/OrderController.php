@@ -6,8 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\Orderline;
 use App\Models\Pizza;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use function Webmozart\Assert\Tests\StaticAnalysis\null;
 
 class OrderController extends Controller
@@ -23,14 +26,10 @@ class OrderController extends Controller
     }
     public function addPizzaToOrder(Request $request)
     {
-        //$value = session('key', 'default');
         $value = session('_token');
-        //get the id of the pizza
         $id = $request['id'];
-        // finds the pizza in the db
         $pizza = Pizza::find($id);
         $quantity = $request['quantity'];
-        //puts the pizza into the order\
 
 
         $size = 0;
@@ -54,39 +53,28 @@ class OrderController extends Controller
 //        $orderline = new Orderline();
         $order->orderline()->create([ 'pizzas_id'=> $pizza['id'],'size_id' => $size,'quantity'=>$quantity, 'order_id'=>$order['id']]);
 
+           $user = Auth::user();
+           DB::table('users')->where('id', $user->id)->increment('pizzapoints');
+   
+        // dd($user->pizzapoints);
         
-
         // dd($order['id']);
 
         //$orderline->order()->attach([ 'id'=>null,'quantity'=>1,'pizzas_id'=> $pizza['id']]);
         //Pizza::Orderline();
         return view('bestellen');
 
-       // return redirect('/winkelwagen');
-
     }
 
     public function showCart()
     {
         $value = session('_token');
-
-
-        // Find the order associated with the session, eager loading related data
         $order = Order::with(['orderline' => function ($query) {
             $query->with('pizza');
             $query->with('pizzasize');
 
         }])->where('session', $value)->first();
 
-
-
-
-
-
-
-        // Check if the order variable is set
-
-            // Redirect or handle the case when the order is not found
         return View::make('winkelwagen', ['order' => $order]);
 
 
