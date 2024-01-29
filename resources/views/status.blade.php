@@ -11,7 +11,7 @@
 <body>
     @if($order)
     
-    <h1>Pizza Status</h1>
+    <h1>Hoe ver is uw bestelling?</h1>
     <div id="statusGrid">
         <div id="columnBetaald">
             <h1>Betaald</h1>
@@ -30,6 +30,8 @@
             <i class="fa-solid fa-truck-front"></i>
         </div>
     </div>
+
+    <button onclick="destroyTheSession();">Bestelling annuleren</button>
 
     @else
     <p>U heeft niks besteld! Ga naar <a href="/bestellen">bestellen</a> om een pizza toe te voegen.</p>

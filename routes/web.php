@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\KoerierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,9 +44,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-
-    // Use the 'order.status' route name for order-status
     Route::get('/order-status', [OrderController::class, 'redirectToOrderStatus'])->name('order.status');
 
     Route::get('/koerier', function () {
@@ -74,6 +72,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/track-and-trace', function () {
         return view('track-and-trace');
     });
+
+    Route::post('/submit-form', [KoerierController::class, 'submitForm'])->name('submit.form');
 
 });
 

@@ -78,13 +78,12 @@
                         </label>
                     </div>
 
-                <form>
+                    <form action="{{ route('submit.form') }}" method="post">
+                        @csrf
                     <label for="textarea">Schade vermelden:</label>
                     <textarea id="textarea" name="textarea" rows="8" cols="50" required></textarea>
                     <label for="imageUpload">Foto uploaden:</label>
                     <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
-
-                    <!-- Image preview -->
                     <img id="imagePreview" src="#" alt="Uploaded Image" style="display:none; max-width:100%; margin-top:10px;">
 
                     <button type="submit">Versturen</button>

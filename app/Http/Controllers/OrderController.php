@@ -26,14 +26,10 @@ class OrderController extends Controller
     {
 
 
-        //$value = session('key', 'default');
         $value = session('_token');
-        //get the id of the pizza
         $id = $request['id'];
-        // finds the pizza in the db
         $pizza = Pizza::find($id);
         $quantity = $request['quantity'];
-        //puts the pizza into the order\
 
 
         $size = 0;
@@ -75,17 +71,12 @@ class OrderController extends Controller
     public function showCart()
     {
         $value = session('_token');
-
-        // Find the order associated with the session, eager loading related data
         $order = Order::with(['orderline' => function ($query) {
             $query->with('pizza');
             $query->with('pizzasize');
 
         }])->where('session', $value)->first();
 
-        // Check if the order variable is set
-
-            // Redirect or handle the case when the order is not found
         return View::make('winkelwagen', ['order' => $order]);
 
 
@@ -121,7 +112,6 @@ class OrderController extends Controller
 
         Orderline::destroy($request['id']);
 
-        // Find the order associated with the session, eager loading related data
         $order = Order::with(['orderline' => function ($query) {
             $query->with('pizza');
             $query->with('pizzasize');

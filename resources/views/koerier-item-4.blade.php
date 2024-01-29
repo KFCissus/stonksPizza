@@ -78,7 +78,8 @@
                         </label>
                     </div>
 
-                <form>
+                    <form action="{{ route('submit.form') }}" method="post">
+                        @csrf
                     <label for="textarea">Schade vermelden:</label>
                     <textarea id="textarea" name="textarea" rows="8" cols="50" required></textarea>
                     <button type="submit">Versturen</button>
