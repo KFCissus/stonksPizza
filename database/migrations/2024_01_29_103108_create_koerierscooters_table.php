@@ -14,16 +14,16 @@ return new class extends Migration
         Schema::create('koerierscooters', function (Blueprint $table) {
             $table->id();
             $table->string('scooter');
-            $table->text('schade'); 
+            $table->string('status')->default('Ingecheckt');
+            $table->text('schade');
             $table->timestamps();
         });
     }
 
-
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('koerierscooters');
     }

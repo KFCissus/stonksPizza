@@ -64,56 +64,36 @@
                 <img src="/images/scooter.jpg" alt="Image 1">
             </div>
             <div class="details-section">
-
-
-
-                    <div class="radiobuttons">
-                        <label>
-                            <input type="radio" name="checkOption" id="incheckenRadio">
-                            Inchecken
-                        </label>
-                        <label>
-                            <input type="radio" name="checkOption" id="uitcheckenRadio">
-                            Uitchecken
-                        </label>
-                    </div>
-
+                <div class="radiobuttons">
                     <form action="{{ route('submit.form') }}" method="post">
                         @csrf
-                    <label for="textarea">Schade vermelden:</label>
-                    <textarea id="textarea" name="textarea" rows="8" cols="50" required></textarea>
-                    <label for="imageUpload">Foto uploaden:</label>
-                    <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
-                    <img id="imagePreview" src="#" alt="Uploaded Image" style="display:none; max-width:100%; margin-top:10px;">
 
-                    <button type="submit">Versturen</button>
-                </form>
+                        <div class="radiobuttons">
+                            <label>
+                                <input type="radio" name="checkOption" value="inchecken" id="incheckenRadio">
+                                Inchecken
+                            </label>
+                            <label>
+                                <input type="radio" name="checkOption" value="uitchecken" id="uitcheckenRadio">
+                                Uitchecken
+                            </label>
+                        </div>
+
+
+                        <input type="hidden" name="uitchecken" value="1">
+
+
+                        <label for="textarea">Schade vermelden:</label>
+                        <textarea id="textarea" name="textarea" rows="8" cols="50" required></textarea>
+
+                        <button type="submit">Versturen</button>
+                    </form>
             </div>
         </div>
     </div>
 
     </article>
-    <footer>
-        <br>
-        <div class="row">
-            <div id="paginas" class="column">
-                <h2>Pagina's</h2>
-                <p><a class="links" href="/home">Home-pagina</a> <br>
-                  <a class="links" href="#" target="_blank">Reserveren van een tafel</a> <br>
-                <a class="links" href="/bestellen">Eten bestellen</a> <br>
-                    <a class="links" href="/status-bestelling">Status bestelling</a> <br>
-                    <a class="links" href="#">Contact</a><br>
-                </p>
-            </div>
-            <div class="column">
-                <h2 class="footerH2">Sociale media</h2>
-                <p><a class="links" href="https://instagram.com"> <i class="fa-brands fa-instagram"></i> Instagram</a>
-                </p> <br>
-                <p><a class="links" href="https://facebook.com"> <i class="fa-brands fa-facebook"></i> FaceBook</a></p>
-                <br>
-                <p><a class="links" href="htps://twitter.com"> <i class="fa-brands fa-x-twitter"></i> Twitter</a></p> <br>
-            </div>
-    </footer>
+
     <script src="script.js"></script>
 
     <!-- Alert bericht -->
@@ -132,25 +112,31 @@
 
     <script>
         function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-    document.querySelector(".hamburger-menu").style.display = "none";
-}
+            document.getElementById("myNav").style.width = "100%";
+            document.querySelector(".hamburger-menu").style.display = "none";
+        }
 
-function closeNav() {
-    document.getElementById("myNav").style.width = "0";
-    document.querySelector(".hamburger-menu").style.display = "block";
-}
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0";
+            document.querySelector(".hamburger-menu").style.display = "block";
+        }
 
-function saveRadioButtonState() {
+        function saveRadioButtonState() {
     const radioButtons = document.querySelectorAll('.radiobuttons input[type="radio"]');
     const selectedRadioButton = [...radioButtons].find(rb => rb.checked);
 
     if (selectedRadioButton) {
+        // Set the value of 'checkOption' in the form based on the selected radio button
+        document.querySelector('input[name="checkOption"]').value = selectedRadioButton.value;
+
+        // Log the selected radio button value
+        console.log('Selected RadioButton:', selectedRadioButton.value);
+
+        // Save to localStorage
         localStorage.setItem('selectedRadioButton', selectedRadioButton.id);
     }
 }
 
-// Function to load radio button state from local storage
 function loadRadioButtonState() {
     const selectedRadioButtonId = localStorage.getItem('selectedRadioButton');
 
@@ -158,12 +144,12 @@ function loadRadioButtonState() {
         const selectedRadioButton = document.getElementById(selectedRadioButtonId);
         if (selectedRadioButton) {
             selectedRadioButton.checked = true;
+
+            // Log the loaded radio button value
+            console.log('Loaded RadioButton:', selectedRadioButton.value);
         }
     }
 }
-
-// Call the loadRadioButtonState function when the page loads
-document.addEventListener('DOMContentLoaded', loadRadioButtonState);
 
 document.addEventListener('DOMContentLoaded', () => {
     // Load radio button state on page load
@@ -176,21 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.getElementById("imageUpload").addEventListener("change", function () {
-            const preview = document.getElementById("imagePreview");
-            const file = this.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-                preview.src = e.target.result;
-                preview.style.display = "block";
-            };
-
-            reader.readAsDataURL(file);
-        });
-
     </script>
 </body>
 
 </html>
-

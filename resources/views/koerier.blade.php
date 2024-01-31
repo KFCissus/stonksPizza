@@ -72,18 +72,7 @@
             </a>
             <p>Scooter 2</p><p id="koerierPageText"></p>
         </div>
-        <div class="koerier-item unchecked">
-            <a href="/koerier-item-3"> <!-- Add the desired URL for the third image -->
-                <img src="/images/scooter.jpg" alt="Image 3">
-            </a>
-            <p>Scooter 3</p><p id="koerierPageText"></p>
-        </div>
-        <div class="koerier-item unchecked">
-            <a href="/koerier-item-4"> <!-- Add the desired URL for the fourth image -->
-                <img src="/images/scooter.jpg" alt="Image 4">
-            </a>
-            <p>Scooter 4</p><p id="koerierPageText"></p>
-        </div>
+
     </div>
 
     </article>

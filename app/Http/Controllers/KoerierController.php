@@ -8,19 +8,23 @@ use App\Models\Koerierscooter;
 class KoerierController extends Controller
 {
     public function submitForm(Request $request)
-    {
-        $request->validate([
-            'textarea' => 'required',
-        ]);
+{
+    $request->validate([
+        'textarea' => 'required',
+    ]);
 
-        $scooterValues = [1, 2, 3, 4];
-        $randomScooter = $scooterValues[array_rand($scooterValues)];
+    $scooterValues = [1, 2];
+    $randomScooter = $scooterValues[array_rand($scooterValues)];
 
-        Koerierscooter::create([
-            'scooter' => $randomScooter,
-            'schade' => $request->input('textarea'),
-        ]);
+    $data = [
+        'scooter' => $randomScooter,
+        'schade' => $request->input('textarea'),
+        'inchecken' => $request->has('incheckenRadio'),
+        'uitchecken' => !$request->has('incheckenRadio'),
+    ];
 
-        return redirect()->back()->with('success', 'Form submitted successfully!');
-    }
+    Koerierscooter::create($data);
+
+    return redirect()->back()->with('success', 'Form submitted successfully!');
+}
 }
