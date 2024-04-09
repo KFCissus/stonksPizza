@@ -25,7 +25,7 @@
     <div class="hero-image">
         <nav>
             <ul>
-                <li id="active"><a href="#"> <i class="fa-solid fa-house"></i> Huis</a></li>
+                <li id="active"><a href="/home"> <i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="#menukaart"> <i class="fa-solid fa-utensils"></i> Menukaart</a></li>
                 <li><a href="#"> <i class="fa-solid fa-book"></i> Boek een tafel</a>
                 </li>
@@ -37,10 +37,8 @@
           <div class="overlay-content">
             <img src="https://i.pinimg.com/originals/04/88/32/04883229aaa10693e1966b39142ad4a9.png" alt="ladyimage" height="500px">
             <a href="/bestellen">Eten bestellen</a>
-            <a href="#">Reserveren</a>
-              <a href="/status-bestelling">Status bestelling</a>
-              <a href="/dashboard">Account beheren</a>
-            <a href="#">Contact</a>
+            <a href="/status-bestelling">Status bestelling</a>
+            <a href="/dashboard">Account beheren</a>
             <a href="/koerier">Koerier</a>
             <a href="/track-and-trace">Track and trace</a>
           </div>
